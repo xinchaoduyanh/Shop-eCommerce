@@ -14,7 +14,7 @@ const httpServer = createServer(app)
 // ------------------------------------------------CONNECT TO DB AND START SERVER-------------------------------------------------
 databaseService.connect().then(() => {})
 
-httpServer.listen(3000, () => {
-  console.log('Server is running on http://localhost:3000')
+httpServer.listen(envConfig.PORT, () => {
+  console.log(`Server is running on http://localhost:${envConfig.PORT}`)
 })
 export default app
